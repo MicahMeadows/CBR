@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomCardVoteView" customModule="CBR" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="ctv-f7-8T1" id="GBZ-h9-A1P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ctv-f7-8T1">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="303"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="79u-Li-dc4">
+                    <rect key="frame" x="0.0" y="0.0" width="362" height="303"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-hy-PJc">
+                    <rect key="frame" x="81" y="20" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="njy-rF-2jx"/>
+                        <constraint firstAttribute="width" constant="200" id="p57-Cc-4do"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Choose" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" red="0.29411764705882354" green="0.086274509803921567" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-CA-le1">
+                    <rect key="frame" x="0.0" y="253" width="362" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19086299670000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Dgy-gn-xjO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OQq-hy-PJc" firstAttribute="centerX" secondItem="ctv-f7-8T1" secondAttribute="centerX" id="GhM-7l-dnC"/>
+                <constraint firstAttribute="bottom" secondItem="KMZ-CA-le1" secondAttribute="bottom" id="f3z-mG-boj"/>
+                <constraint firstItem="OQq-hy-PJc" firstAttribute="top" secondItem="ctv-f7-8T1" secondAttribute="top" constant="20" id="jRz-hg-zXB"/>
+                <constraint firstItem="KMZ-CA-le1" firstAttribute="leading" secondItem="ctv-f7-8T1" secondAttribute="leading" id="pXc-Vz-ZgY"/>
+                <constraint firstItem="KMZ-CA-le1" firstAttribute="trailing" secondItem="ctv-f7-8T1" secondAttribute="trailing" id="phd-5h-e8C"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.00000000000001" y="143.63839285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

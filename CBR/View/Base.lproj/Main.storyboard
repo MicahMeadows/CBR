@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -125,16 +124,14 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-PP-qRi">
                                 <rect key="frame" x="25" y="44" width="364" height="818.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyu-Ea-acA" customClass="CardVoteView" customModule="CBR" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyu-Ea-acA" customClass="TopCardVoteView" customModule="CBR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="344"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Gyu-Ea-acA" secondAttribute="height" multiplier="18:17" id="PBP-0e-bKA"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhk-1P-auc">
                                         <rect key="frame" x="0.0" y="392" width="364" height="35"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="y3b-me-2k6"/>
                                         </constraints>
@@ -142,15 +139,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="II7-FE-fGk" customClass="CardVoteView" customModule="CBR" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="II7-FE-fGk" customClass="BottomCardVoteView" customModule="CBR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="475" width="364" height="343.5"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="II7-FE-fGk" secondAttribute="height" multiplier="18:17" id="rXH-Ue-71x"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstItem="II7-FE-fGk" firstAttribute="width" secondItem="Gyu-Ea-acA" secondAttribute="width" id="JAU-5n-Tfe"/>
                                     <constraint firstItem="II7-FE-fGk" firstAttribute="height" secondItem="Gyu-Ea-acA" secondAttribute="height" id="qFY-vB-WXi"/>
@@ -169,6 +164,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="dW9-ez-paZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bottomVote" destination="II7-FE-fGk" id="tpL-ZM-22U"/>
+                        <outlet property="topVote" destination="Gyu-Ea-acA" id="3GK-yn-joQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4u-Cg-g3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,18 +202,4 @@
             <point key="canvasLocation" x="3180" y="513"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
