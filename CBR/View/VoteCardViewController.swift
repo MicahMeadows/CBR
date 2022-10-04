@@ -1,29 +1,20 @@
 //
-//  ViewControllerP1.swift
+//  VoteCardViewController.swift
 //  CBR
 //
-//  Created by Micah Meadows on 9/27/22.
+//  Created by Micah Meadows on 10/4/22.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    @IBOutlet var containerView: UIView?;
-    
-    @IBAction func rankingButtonPressed(_ btn: UIButton) {
-        print("ranking btn pressed");
-    }
-    
-    @IBAction func voteButtonPressed(_ btn: UIButton) {
-        print("vote btn pressed");
-    }
-    
+class VoteCardViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

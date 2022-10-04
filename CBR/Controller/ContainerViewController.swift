@@ -8,9 +8,6 @@
 import UIKit
 
 class ContainerViewController: UIViewController {
-//    let rankingsVC = RankingsViewController();
-//    let voteVC = VoteViewController();
-    
     lazy var rankingsVC: RankingsViewController? = {
         let storyboard = UIStoryboard(name: "Main", bundle: .main);
         var vc: RankingsViewController?;
@@ -59,8 +56,22 @@ class ContainerViewController: UIViewController {
         
         hideAllPages();
     }
+    
+    @objc func goRankingPage(_ notif: Notification) {
+        showRankingsPage();
+    }
+    
+    @objc func goVotePage(_ notif: Notification) {
+        showVotePage();
+    }
+    
     override func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(goRankingPage(_:)), name: NSNotification.Name("navigate.rankings"), object: nil);
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(goVotePage(_:)), name: NSNotification.Name("navigate.vote"), object: nil);
+        
         setup();
+        
         showVotePage();
         super.viewDidLoad()
 
