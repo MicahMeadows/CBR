@@ -116,13 +116,13 @@
         <!--Rankings-->
         <scene sceneID="jxO-vD-CoA">
             <objects>
-                <viewController restorationIdentifier="RankingsViewController" storyboardIdentifier="RankingsViewController" title="Rankings" id="Udc-Dp-QI6" customClass="RankingsViewController" customModule="CBR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="VoteViewController" storyboardIdentifier="VoteViewController" title="Rankings" id="Udc-Dp-QI6" customClass="VoteViewController" customModule="CBR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wyG-Zg-0jR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-PP-qRi">
-                                <rect key="frame" x="25" y="44" width="364" height="818.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-PP-qRi">
+                                <rect key="frame" x="25" y="0.0" width="364" height="762.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyu-Ea-acA" customClass="TopCardVoteView" customModule="CBR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="344"/>
@@ -131,7 +131,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhk-1P-auc">
-                                        <rect key="frame" x="0.0" y="392" width="364" height="35"/>
+                                        <rect key="frame" x="0.0" y="364" width="364" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="y3b-me-2k6"/>
                                         </constraints>
@@ -139,8 +139,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="II7-FE-fGk" customClass="BottomCardVoteView" customModule="CBR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="475" width="364" height="343.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="II7-FE-fGk" customClass="BottomCardVoteView" customModule="CBR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="419" width="364" height="343.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="II7-FE-fGk" secondAttribute="height" multiplier="18:17" id="rXH-Ue-71x"/>
                                         </constraints>
@@ -152,21 +152,21 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="T7m-ml-0eV"/>
+                        <viewLayoutGuide key="safeArea" id="VZS-ED-wJ4"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="leading" secondItem="T7m-ml-0eV" secondAttribute="leading" constant="25" id="Dhm-t8-cSV"/>
-                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="trailing" secondItem="T7m-ml-0eV" secondAttribute="trailing" constant="-25" id="Emr-ih-gef"/>
-                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="top" secondItem="T7m-ml-0eV" secondAttribute="top" id="IUl-H8-1b3"/>
-                            <constraint firstItem="T7m-ml-0eV" firstAttribute="bottom" secondItem="FJ7-PP-qRi" secondAttribute="bottom" id="TME-gv-Npb"/>
-                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="bottom" secondItem="T7m-ml-0eV" secondAttribute="bottom" id="q3Z-ii-rSR"/>
+                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="leading" secondItem="wyG-Zg-0jR" secondAttribute="leading" constant="25" id="Dhm-t8-cSV"/>
+                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="trailing" secondItem="wyG-Zg-0jR" secondAttribute="trailing" constant="-25" id="Emr-ih-gef"/>
+                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="top" secondItem="wyG-Zg-0jR" secondAttribute="top" id="IUl-H8-1b3"/>
+                            <constraint firstAttribute="bottom" secondItem="FJ7-PP-qRi" secondAttribute="bottom" id="TME-gv-Npb"/>
+                            <constraint firstItem="FJ7-PP-qRi" firstAttribute="bottom" secondItem="wyG-Zg-0jR" secondAttribute="bottom" id="q3Z-ii-rSR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dW9-ez-paZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="bottomVote" destination="II7-FE-fGk" id="tpL-ZM-22U"/>
-                        <outlet property="topVote" destination="Gyu-Ea-acA" id="3GK-yn-joQ"/>
+                        <outlet property="bottomVote" destination="II7-FE-fGk" id="6Oe-O4-h6c"/>
+                        <outlet property="topVote" destination="Gyu-Ea-acA" id="l84-3f-HUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4u-Cg-g3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,7 +176,7 @@
         <!--Vote-->
         <scene sceneID="yVI-YP-QHI">
             <objects>
-                <viewController restorationIdentifier="VoteViewController" storyboardIdentifier="VoteViewController" title="Vote" id="EQG-D7-E2N" customClass="VoteViewController" customModule="CBR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="RankingsViewController" storyboardIdentifier="RankingsViewController" title="Vote" id="EQG-D7-E2N" customClass="RankingsViewController" customModule="CBR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0QM-ac-gNs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

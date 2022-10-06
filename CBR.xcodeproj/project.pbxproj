@@ -19,9 +19,16 @@
 		FFDCF90C28E34C3600BDDDF3 /* CBR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFDCF90A28E34C3600BDDDF3 /* CBR.xcdatamodeld */; };
 		FFDCF90E28E34C3800BDDDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDCF90D28E34C3800BDDDF3 /* Assets.xcassets */; };
 		FFDCF91128E34C3800BDDDF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDCF90F28E34C3800BDDDF3 /* LaunchScreen.storyboard */; };
-		FFF0736128ECA0B800A0C3E3 /* RankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0736028ECA0B800A0C3E3 /* RankingsViewController.swift */; };
-		FFF0736328ECA0C100A0C3E3 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0736228ECA0C100A0C3E3 /* VoteViewController.swift */; };
+		FFF0736128ECA0B800A0C3E3 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0736028ECA0B800A0C3E3 /* VoteViewController.swift */; };
+		FFF0736328ECA0C100A0C3E3 /* RankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0736228ECA0C100A0C3E3 /* RankingsViewController.swift */; };
 		FFF0736728ECB18D00A0C3E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0736628ECB18D00A0C3E3 /* ContainerViewController.swift */; };
+		FFFA144928ED2BEF00ED8140 /* CardVoteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA144828ED2BEF00ED8140 /* CardVoteDelegate.swift */; };
+		FFFA144B28ED32D600ED8140 /* MatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA144A28ED32D600ED8140 /* MatchRepository.swift */; };
+		FFFA145028ED334600ED8140 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA144F28ED334600ED8140 /* Location.swift */; };
+		FFFA145228ED34AF00ED8140 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145128ED34AF00ED8140 /* Match.swift */; };
+		FFFA145428ED350300ED8140 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145328ED350300ED8140 /* MatchResult.swift */; };
+		FFFA145628ED367800ED8140 /* TestMatchRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */; };
+		FFFA145A28EE9DDB00ED8140 /* VoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145928EE9DDB00ED8140 /* VoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +46,16 @@
 		FFDCF90D28E34C3800BDDDF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDCF91028E34C3800BDDDF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFDCF91228E34C3800BDDDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFF0736028ECA0B800A0C3E3 /* RankingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewController.swift; sourceTree = "<group>"; };
-		FFF0736228ECA0C100A0C3E3 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		FFF0736028ECA0B800A0C3E3 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		FFF0736228ECA0C100A0C3E3 /* RankingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewController.swift; sourceTree = "<group>"; };
 		FFF0736628ECB18D00A0C3E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		FFFA144828ED2BEF00ED8140 /* CardVoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVoteDelegate.swift; sourceTree = "<group>"; };
+		FFFA144A28ED32D600ED8140 /* MatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRepository.swift; sourceTree = "<group>"; };
+		FFFA144F28ED334600ED8140 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FFFA145128ED34AF00ED8140 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		FFFA145328ED350300ED8140 /* MatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
+		FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMatchRepositoryImpl.swift; sourceTree = "<group>"; };
+		FFFA145928EE9DDB00ED8140 /* VoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +74,8 @@
 			children = (
 				FFDCF90528E34C3600BDDDF3 /* ViewController.swift */,
 				FF1A6DE228E3BC4D009BAC60 /* HomeViewController.swift */,
-				FFF0736028ECA0B800A0C3E3 /* RankingsViewController.swift */,
-				FFF0736228ECA0C100A0C3E3 /* VoteViewController.swift */,
+				FFF0736028ECA0B800A0C3E3 /* VoteViewController.swift */,
+				FFF0736228ECA0C100A0C3E3 /* RankingsViewController.swift */,
 				FFF0736628ECB18D00A0C3E3 /* ContainerViewController.swift */,
 			);
 			path = Controller;
@@ -70,6 +84,10 @@
 		FFD76CF028ECE42300731445 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFFA145728EE9BE200ED8140 /* ViewModel */,
+				FFFA144E28ED333400ED8140 /* Entity */,
+				FFFA144D28ED331E00ED8140 /* Delegate */,
+				FFFA144C28ED331200ED8140 /* Repository */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +134,41 @@
 				FFDCF90A28E34C3600BDDDF3 /* CBR.xcdatamodeld */,
 			);
 			path = CBR;
+			sourceTree = "<group>";
+		};
+		FFFA144C28ED331200ED8140 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FFFA144A28ED32D600ED8140 /* MatchRepository.swift */,
+				FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FFFA144D28ED331E00ED8140 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FFFA144828ED2BEF00ED8140 /* CardVoteDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FFFA144E28ED333400ED8140 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FFFA144F28ED334600ED8140 /* Location.swift */,
+				FFFA145128ED34AF00ED8140 /* Match.swift */,
+				FFFA145328ED350300ED8140 /* MatchResult.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FFFA145728EE9BE200ED8140 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFFA145928EE9DDB00ED8140 /* VoteViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,14 +246,21 @@
 			files = (
 				FFDCF90628E34C3600BDDDF3 /* ViewController.swift in Sources */,
 				FF84D40D28ECFCC800DED2F9 /* BottomCardVoteView.swift in Sources */,
+				FFFA144928ED2BEF00ED8140 /* CardVoteDelegate.swift in Sources */,
 				FFDCF90228E34C3600BDDDF3 /* AppDelegate.swift in Sources */,
+				FFFA145428ED350300ED8140 /* MatchResult.swift in Sources */,
+				FFFA145A28EE9DDB00ED8140 /* VoteViewModel.swift in Sources */,
 				FFF0736728ECB18D00A0C3E3 /* ContainerViewController.swift in Sources */,
-				FFF0736328ECA0C100A0C3E3 /* VoteViewController.swift in Sources */,
+				FFF0736328ECA0C100A0C3E3 /* RankingsViewController.swift in Sources */,
+				FFFA145628ED367800ED8140 /* TestMatchRepositoryImpl.swift in Sources */,
+				FFFA145028ED334600ED8140 /* Location.swift in Sources */,
 				FFDCF90428E34C3600BDDDF3 /* SceneDelegate.swift in Sources */,
 				FF1A6DE328E3BC4D009BAC60 /* HomeViewController.swift in Sources */,
 				FFDCF90C28E34C3600BDDDF3 /* CBR.xcdatamodeld in Sources */,
-				FFF0736128ECA0B800A0C3E3 /* RankingsViewController.swift in Sources */,
+				FFFA144B28ED32D600ED8140 /* MatchRepository.swift in Sources */,
+				FFF0736128ECA0B800A0C3E3 /* VoteViewController.swift in Sources */,
 				FFD76CFF28ECE6F600731445 /* TopCardVoteView.swift in Sources */,
+				FFFA145228ED34AF00ED8140 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

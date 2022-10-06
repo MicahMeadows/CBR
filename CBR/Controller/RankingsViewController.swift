@@ -1,5 +1,5 @@
 //
-//  RankingsViewController.swift
+//  VoteViewController.swift
 //  CBR
 //
 //  Created by Micah Meadows on 10/4/22.
@@ -8,14 +8,9 @@
 import UIKit
 
 class RankingsViewController: UIViewController {
-    
-    @IBOutlet var topVote: TopCardVoteView?;
-    @IBOutlet var bottomVote: BottomCardVoteView?;
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        topVote?.view.layer.cornerRadius = 15;
-        topVote?.view.layer.masksToBounds = true;
 
         // Do any additional setup after loading the view.
     }

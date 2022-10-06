@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomCardVoteView" customModule="CBR" customModuleProvider="target">
             <connections>
+                <outlet property="btn" destination="OQq-hy-PJc" id="yps-yN-vI8"/>
+                <outlet property="image" destination="79u-Li-dc4" id="RRW-ud-Fzr"/>
+                <outlet property="label" destination="KMZ-CA-le1" id="czI-SP-G2h"/>
                 <outlet property="view" destination="ctv-f7-8T1" id="GBZ-h9-A1P"/>
             </connections>
         </placeholder>
@@ -33,10 +36,13 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" red="0.29411764705882354" green="0.086274509803921567" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onVote" destination="-1" eventType="touchUpInside" id="MEK-ym-0by"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-CA-le1">
                     <rect key="frame" x="0.0" y="253" width="362" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19086299670000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Dgy-gn-xjO"/>
                     </constraints>

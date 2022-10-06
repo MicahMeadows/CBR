@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopCardVoteView" customModule="CBR" customModuleProvider="target">
             <connections>
+                <outlet property="btn" destination="gr1-De-V02" id="Fy2-cO-CDF"/>
+                <outlet property="image" destination="pfc-WI-JZX" id="uDJ-TX-eUU"/>
+                <outlet property="label" destination="3DI-lK-g0c" id="saA-Fk-Naz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="IBf-Ed-n2P"/>
             </connections>
         </placeholder>
@@ -33,10 +36,13 @@
                         <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onVote" destination="-1" eventType="touchUpInside" id="iFX-zZ-tgF"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-lK-g0c">
                     <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19086299668874171" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="MMh-ZL-R60"/>
                     </constraints>

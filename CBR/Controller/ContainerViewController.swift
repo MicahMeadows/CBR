@@ -72,7 +72,7 @@ class ContainerViewController: UIViewController {
         
         setup();
         
-        showRankingsPage();
+        showVotePage();
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
