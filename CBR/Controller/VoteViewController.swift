@@ -14,11 +14,12 @@ class TopCardDelegate: CardVoteDelegate {
         self.vc = vc;
     }
     func onVote() {
+        self.vc.onMatchStartLoad();
         if let cMatch = vc.voteViewModel.currentMatch {
             Task {
                 await vc.voteViewModel.submitSelection(selection: cMatch.redTeam);
             }
-            vc.updateView();
+            vc.onMatchLoad();
         }
     }
 }
@@ -29,11 +30,12 @@ class BottomCardDelegate: CardVoteDelegate {
         self.vc = vc;
     }
     func onVote() {
+        self.vc.onMatchStartLoad();
         if let cMatch = vc.voteViewModel.currentMatch {
             Task {
                 await vc.voteViewModel.submitSelection(selection: cMatch.blueTeam);
             }
-            vc.updateView();
+            vc.onMatchLoad();
         }
     }
 }
@@ -43,6 +45,17 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     @IBOutlet var topVote: TopCardVoteView!;
     @IBOutlet var bottomVote: BottomCardVoteView!;
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!;
+    @IBOutlet var mainContent: UIView!;
+    
+    var topImage: UIImageView {
+        return topVote.image;
+    }
+    
+    var bottomImage: UIImageView {
+        return bottomVote.image;
+    }
+    
     var topDelegate: TopCardDelegate!;
     var bottomDelegate: BottomCardDelegate!;
     
@@ -50,18 +63,42 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     
     func onMatchLoad() {
         updateView();
+        DispatchQueue.main.async {
+            self.mainContent.isHidden = false;
+            self.activityIndicator.isHidden = true;
+        }
     }
     
     func onMatchStartLoad() {
-        print("load start...");
+        DispatchQueue.main.async {
+            self.mainContent.isHidden = true;
+            self.activityIndicator.isHidden = false;
+        }
     }
     
     func updateView() {
         if let match = voteViewModel.currentMatch {
-            print("Match \(match.matchID)");
             DispatchQueue.main.async {
-                self.topVote.label.text = match.redTeam.name;
-                self.bottomVote.label.text = match.blueTeam.name;
+                let topTeam = match.redTeam;
+                let bottomTeam = match.blueTeam;
+                
+                self.topVote.label.text = topTeam.name;
+                self.bottomVote.label.text = bottomTeam.name;
+                
+                let topURL = URL(string: topTeam.imageUrl)!;
+                let bottomURL = URL(string: bottomTeam.imageUrl)!;
+                
+                if let topData = try? Data(contentsOf: topURL) {
+                    if let topImage = UIImage(data: topData) {
+                        self.topImage.image = topImage;
+                    }
+                }
+                
+                if let bottomData = try? Data(contentsOf: bottomURL) {
+                    if let bottomImage = UIImage(data: bottomData) {
+                        self.bottomImage.image = bottomImage;
+                    }
+                }
             }
         }
     }
@@ -77,6 +114,7 @@ class VoteViewController: UIViewController, MatchViewDelegate {
         bottomDelegate = BottomCardDelegate(self);
         topVote.delegate = topDelegate;
         bottomVote.delegate = bottomDelegate;
+        
 
         // Do any additional setup after loading the view.
     }

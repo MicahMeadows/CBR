@@ -121,7 +121,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-PP-qRi">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-rw-dIw">
+                                <rect key="frame" x="188.5" y="363" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FJ7-PP-qRi" userLabel="Main Content">
                                 <rect key="frame" x="25" y="0.0" width="364" height="762.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyu-Ea-acA" customClass="TopCardVoteView" customModule="CBR" customModuleProvider="target">
@@ -158,6 +161,8 @@
                             <constraint firstItem="FJ7-PP-qRi" firstAttribute="leading" secondItem="wyG-Zg-0jR" secondAttribute="leading" constant="25" id="Dhm-t8-cSV"/>
                             <constraint firstItem="FJ7-PP-qRi" firstAttribute="trailing" secondItem="wyG-Zg-0jR" secondAttribute="trailing" constant="-25" id="Emr-ih-gef"/>
                             <constraint firstItem="FJ7-PP-qRi" firstAttribute="top" secondItem="wyG-Zg-0jR" secondAttribute="top" id="IUl-H8-1b3"/>
+                            <constraint firstItem="mN9-rw-dIw" firstAttribute="centerY" secondItem="wyG-Zg-0jR" secondAttribute="centerY" id="Q85-Wr-VKa"/>
+                            <constraint firstItem="mN9-rw-dIw" firstAttribute="centerX" secondItem="wyG-Zg-0jR" secondAttribute="centerX" id="RBH-vX-mup"/>
                             <constraint firstAttribute="bottom" secondItem="FJ7-PP-qRi" secondAttribute="bottom" id="TME-gv-Npb"/>
                             <constraint firstItem="FJ7-PP-qRi" firstAttribute="bottom" secondItem="wyG-Zg-0jR" secondAttribute="bottom" id="q3Z-ii-rSR"/>
                         </constraints>
@@ -165,7 +170,9 @@
                     <navigationItem key="navigationItem" id="dW9-ez-paZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="mN9-rw-dIw" id="fCv-sl-bPG"/>
                         <outlet property="bottomVote" destination="II7-FE-fGk" id="6Oe-O4-h6c"/>
+                        <outlet property="mainContent" destination="FJ7-PP-qRi" id="SOS-xs-Br0"/>
                         <outlet property="topVote" destination="Gyu-Ea-acA" id="l84-3f-HUA"/>
                     </connections>
                 </viewController>
