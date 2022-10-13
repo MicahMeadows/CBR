@@ -8,6 +8,14 @@
 import UIKit
 
 class MoreViewController: UIViewController {
+    
+    @IBAction func openGithub() {
+        UIApplication.shared.openURL(URL(string: "https://github.com/micahmeadows")!);
+    }
+    
+    @IBAction func openLinked() {
+        UIApplication.shared.openURL(URL(string: "https://linkedin.com/in/micah-meadows")!);
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

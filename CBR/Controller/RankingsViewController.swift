@@ -30,6 +30,8 @@ extension RankingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let newDetailController = self.storyboard?.instantiateViewController(withIdentifier: "LocationDetailViewController") as? LocationDetailViewController {
             self.navigationController?.present(newDetailController, animated: true);
+            let rankedLocation = self.rankingsViewModel.loadedRankings[indexPath.row];
+            newDetailController.setLocation(location: rankedLocation.location);
         }
     }
 }
