@@ -14,7 +14,8 @@ class VoteViewModel {
     let matchViewDelegate: MatchViewDelegate!;
     
     func loadNewMatch() async {
-        currentMatch = matchRepository.getNewMatch();
+        matchViewDelegate.onMatchStartLoad();
+        currentMatch = await matchRepository.getNewMatch();
         matchViewDelegate.onMatchLoad();
     }
     
@@ -23,7 +24,7 @@ class VoteViewModel {
             let winner = selection;
             let loser = match.redTeam.id == selection.id ? match.blueTeam : match.redTeam;
             let result = MatchResult(matchID: match.matchID, winner: winner, loser: loser);
-            matchRepository.submitMatch(result: result);
+            await matchRepository.submitMatch(result: result);
         }
         currentMatch = nil;
         await loadNewMatch();

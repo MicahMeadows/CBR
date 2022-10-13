@@ -8,6 +8,6 @@
 import Foundation
 
 protocol MatchRepository {
-    func submitMatch(result: MatchResult);
-    func getNewMatch() -> Match;
+    func submitMatch(result: MatchResult) async;
+    func getNewMatch() async -> Match;
 }

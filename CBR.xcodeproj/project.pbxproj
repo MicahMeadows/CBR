@@ -10,6 +10,7 @@
 		FF1A6DE328E3BC4D009BAC60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A6DE228E3BC4D009BAC60 /* HomeViewController.swift */; };
 		FF84D40B28ECFB6200DED2F9 /* BottomCardVoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF84D40A28ECFB6200DED2F9 /* BottomCardVoteView.xib */; };
 		FF84D40D28ECFCC800DED2F9 /* BottomCardVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84D40C28ECFCC800DED2F9 /* BottomCardVoteView.swift */; };
+		FFA20F9A28EEB16700720F04 /* APIMatchRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA20F9928EEB16700720F04 /* APIMatchRepositoryImpl.swift */; };
 		FFD76CFD28ECE66700731445 /* TopCardVoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD76CFC28ECE66700731445 /* TopCardVoteView.xib */; };
 		FFD76CFF28ECE6F600731445 /* TopCardVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD76CFE28ECE6F600731445 /* TopCardVoteView.swift */; };
 		FFDCF90228E34C3600BDDDF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDCF90128E34C3600BDDDF3 /* AppDelegate.swift */; };
@@ -29,12 +30,14 @@
 		FFFA145428ED350300ED8140 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145328ED350300ED8140 /* MatchResult.swift */; };
 		FFFA145628ED367800ED8140 /* TestMatchRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */; };
 		FFFA145A28EE9DDB00ED8140 /* VoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145928EE9DDB00ED8140 /* VoteViewModel.swift */; };
+		FFFA145C28EEAD9800ED8140 /* MatchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA145B28EEAD9800ED8140 /* MatchViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF1A6DE228E3BC4D009BAC60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF84D40A28ECFB6200DED2F9 /* BottomCardVoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardVoteView.xib; sourceTree = "<group>"; };
 		FF84D40C28ECFCC800DED2F9 /* BottomCardVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardVoteView.swift; sourceTree = "<group>"; };
+		FFA20F9928EEB16700720F04 /* APIMatchRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMatchRepositoryImpl.swift; sourceTree = "<group>"; };
 		FFD76CFC28ECE66700731445 /* TopCardVoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCardVoteView.xib; sourceTree = "<group>"; };
 		FFD76CFE28ECE6F600731445 /* TopCardVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCardVoteView.swift; sourceTree = "<group>"; };
 		FFDCF8FE28E34C3600BDDDF3 /* CBR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,7 @@
 		FFFA145328ED350300ED8140 /* MatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMatchRepositoryImpl.swift; sourceTree = "<group>"; };
 		FFFA145928EE9DDB00ED8140 /* VoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewModel.swift; sourceTree = "<group>"; };
+		FFFA145B28EEAD9800ED8140 /* MatchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			children = (
 				FFFA144A28ED32D600ED8140 /* MatchRepository.swift */,
 				FFFA145528ED367800ED8140 /* TestMatchRepositoryImpl.swift */,
+				FFA20F9928EEB16700720F04 /* APIMatchRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FFFA144828ED2BEF00ED8140 /* CardVoteDelegate.swift */,
+				FFFA145B28EEAD9800ED8140 /* MatchViewDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -255,10 +261,12 @@
 				FFFA145628ED367800ED8140 /* TestMatchRepositoryImpl.swift in Sources */,
 				FFFA145028ED334600ED8140 /* Location.swift in Sources */,
 				FFDCF90428E34C3600BDDDF3 /* SceneDelegate.swift in Sources */,
+				FFA20F9A28EEB16700720F04 /* APIMatchRepositoryImpl.swift in Sources */,
 				FF1A6DE328E3BC4D009BAC60 /* HomeViewController.swift in Sources */,
 				FFDCF90C28E34C3600BDDDF3 /* CBR.xcdatamodeld in Sources */,
 				FFFA144B28ED32D600ED8140 /* MatchRepository.swift in Sources */,
 				FFF0736128ECA0B800A0C3E3 /* VoteViewController.swift in Sources */,
+				FFFA145C28EEAD9800ED8140 /* MatchViewDelegate.swift in Sources */,
 				FFD76CFF28ECE6F600731445 /* TopCardVoteView.swift in Sources */,
 				FFFA145228ED34AF00ED8140 /* Match.swift in Sources */,
 			);

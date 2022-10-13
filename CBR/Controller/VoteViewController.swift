@@ -16,7 +16,7 @@ class TopCardDelegate: CardVoteDelegate {
     func onVote() {
         if let cMatch = vc.voteViewModel.currentMatch {
             Task {
-                await vc.voteViewModel.submitSelection(selection: cMatch.blueTeam);
+                await vc.voteViewModel.submitSelection(selection: cMatch.redTeam);
             }
             vc.updateView();
         }
@@ -31,16 +31,13 @@ class BottomCardDelegate: CardVoteDelegate {
     func onVote() {
         if let cMatch = vc.voteViewModel.currentMatch {
             Task {
-                await vc.voteViewModel.submitSelection(selection: cMatch.redTeam);
+                await vc.voteViewModel.submitSelection(selection: cMatch.blueTeam);
             }
             vc.updateView();
         }
     }
 }
 
-protocol MatchViewDelegate {
-    func onMatchLoad();
-}
 
 class VoteViewController: UIViewController, MatchViewDelegate {
     @IBOutlet var topVote: TopCardVoteView!;
@@ -53,6 +50,10 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     
     func onMatchLoad() {
         updateView();
+    }
+    
+    func onMatchStartLoad() {
+        print("load start...");
     }
     
     func updateView() {
@@ -68,7 +69,8 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let matchRepository = TestMatchRepositoryImpl();
+//        let matchRepository = TestMatchRepositoryImpl();
+        let matchRepository = APIMatchRepositoryImpl();
         voteViewModel = VoteViewModel(matchRepository: matchRepository, delegate: self);
         
         topDelegate = TopCardDelegate(self);
