@@ -14,7 +14,7 @@ extension RankingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
-        cell.selectionStyle = .none;
+//        cell.selectionStyle = .none;
         
         let loadedRank = self.rankingsViewModel.loadedRankings[indexPath.row];
         
@@ -22,6 +22,15 @@ extension RankingsViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = loadedRank.location.name;
         
         return cell;
+    }
+}
+
+extension RankingsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let newDetailController = self.storyboard?.instantiateViewController(withIdentifier: "LocationDetailViewController") as? LocationDetailViewController {
+            self.navigationController?.present(newDetailController, animated: true);
+        }
     }
 }
 
@@ -62,6 +71,7 @@ class RankingsViewController: UIViewController, RankingsViewDelegate {
         rankingsRepository = APIRankingsRepositoryImpl();
         rankingsViewModel = RankingsViewModel(rankingsRepository: rankingsRepository, rankingsViewDelegate: self);
         tableView.dataSource = self;
+        tableView.delegate = self;
 
         // Do any additional setup after loading the view.
     }

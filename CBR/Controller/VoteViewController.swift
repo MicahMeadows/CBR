@@ -114,7 +114,6 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let matchRepository = TestMatchRepositoryImpl();
         let matchRepository = APIMatchRepositoryImpl();
         voteViewModel = VoteViewModel(matchRepository: matchRepository, delegate: self);
         
