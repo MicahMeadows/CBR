@@ -20,16 +20,7 @@ class APIMatchRepositoryImpl : MatchRepository {
         urlRequest.httpBody = jsonData;
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let (_, response) = try! await URLSession.shared.data(for: urlRequest);
-        
-        if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-            print("status code: \(statusCode)");
-        }
-        
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            fatalError("Error posting match");
-        }
-        
+        try! await URLSession.shared.data(for: urlRequest);
     }
     
     func getNewMatch() async -> Match {
