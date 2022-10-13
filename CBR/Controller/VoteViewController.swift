@@ -64,15 +64,23 @@ class VoteViewController: UIViewController, MatchViewDelegate {
     func onMatchLoad() {
         updateView();
         DispatchQueue.main.async {
-            self.mainContent.isHidden = false;
-            self.activityIndicator.isHidden = true;
+            UIView.transition(with: self.mainContent, duration: 0.5, options: .transitionCrossDissolve) {
+                self.mainContent.isHidden = false;
+            }
+            UIView.transition(with: self.activityIndicator, duration: 0.5, options: .transitionCrossDissolve) {
+                self.activityIndicator.isHidden = true;
+            }
         }
     }
     
     func onMatchStartLoad() {
         DispatchQueue.main.async {
-            self.mainContent.isHidden = true;
-            self.activityIndicator.isHidden = false;
+            UIView.transition(with: self.mainContent, duration: 0.5, options: .transitionCrossDissolve) {
+                self.mainContent.isHidden = true;
+            }
+            UIView.transition(with: self.activityIndicator, duration: 0.5, options: .transitionCrossDissolve) {
+                self.activityIndicator.isHidden = false;
+            }
         }
     }
     

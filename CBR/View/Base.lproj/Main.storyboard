@@ -50,20 +50,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="500" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-Y0-4dD" userLabel="MoreIcon">
-                                                <rect key="frame" x="223.5" y="0.0" width="25" height="50"/>
+                                                <rect key="frame" x="223.5" y="-3.5" width="26.5" height="56.5"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
-                                                <imageReference key="image" image="info(1).png" symbolScale="large"/>
+                                                <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDl-W3-d9s" userLabel="MoreLbl">
-                                                <rect key="frame" x="258.5" y="0.0" width="50.5" height="50"/>
+                                                <rect key="frame" x="260" y="0.0" width="50.5" height="50"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xuz-nQ-bOJ">
-                                                <rect key="frame" x="319" y="0.0" width="95" height="50"/>
+                                                <rect key="frame" x="320.5" y="0.0" width="93.5" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
@@ -235,7 +236,7 @@
                                 <rect key="frame" x="20" y="64" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" textLabel="crg-K1-tjU" detailTextLabel="lk5-kn-HZM" style="IBUITableViewCellStyleValue1" id="4Px-EM-wpM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="crg-K1-tjU" detailTextLabel="lk5-kn-HZM" style="IBUITableViewCellStyleValue1" id="4Px-EM-wpM">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="71.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Px-EM-wpM" id="7bJ-fR-h5l">
@@ -387,8 +388,8 @@
                                     <constraint firstAttribute="height" constant="45" id="ksM-zJ-dOi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Linked In" imagePadding="10" cornerStyle="large">
-                                    <imageReference key="image" image="square.and.arrow.up.circle.fill" catalog="system" symbolScale="large"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Linked In" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find me on" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-sH-q8y">
@@ -404,8 +405,8 @@
                                     <constraint firstAttribute="width" constant="150" id="M9i-5d-q1m"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="GitHub" imagePadding="10" cornerStyle="large">
-                                    <imageReference key="image" image="square.and.arrow.up.circle.fill" catalog="system" symbolScale="large"/>
+                                <buttonConfiguration key="configuration" style="filled" title="GitHub" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -436,8 +437,7 @@
     </scenes>
     <resources>
         <image name="award(1).png" width="24" height="24"/>
-        <image name="info(1).png" width="25" height="25"/>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="trending-up(1).png" width="24" height="24"/>
         <image name="vs-icon.png" width="84" height="84"/>
         <systemColor name="systemBackgroundColor">

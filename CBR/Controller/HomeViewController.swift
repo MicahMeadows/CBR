@@ -39,28 +39,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         
         let rankingsIconGesture = UITapGestureRecognizer(target: self, action: #selector(rankingsGestureFired(_:)))
-        let rankingsLblGesture = UITapGestureRecognizer(target: self, action: #selector(rankingsGestureFired(_:)))
         
         let voteIconGesture = UITapGestureRecognizer(target: self, action: #selector(voteGestureFired(_:)))
-        let voteLblGesture = UITapGestureRecognizer(target: self, action: #selector(voteGestureFired(_:)))
         
         let moreIconGesture = UITapGestureRecognizer(target: self, action: #selector(moreGestureFired(_:)))
-        let moreLblGesture = UITapGestureRecognizer(target: self, action: #selector(moreGestureFired(_:)))
         
         rankingsLbl.isUserInteractionEnabled = true;
         rankingsIcon.isUserInteractionEnabled = true;
         rankingsIcon.addGestureRecognizer(rankingsIconGesture);
-        rankingsLbl.addGestureRecognizer(rankingsLblGesture);
         
         voteLbl.isUserInteractionEnabled = true;
         voteIcon.isUserInteractionEnabled = true;
         voteIcon.addGestureRecognizer(voteIconGesture);
-        voteLbl.addGestureRecognizer(voteLblGesture);
         
         moreLbl.isUserInteractionEnabled = true;
         moreIcon.isUserInteractionEnabled = true;
         moreIcon.addGestureRecognizer(moreIconGesture);
-        moreLbl.addGestureRecognizer(moreLblGesture);
         
         goVotePage();
         
@@ -69,9 +63,33 @@ class HomeViewController: UIViewController {
     }
     
     func hideAllTabs() {
-        self.rankingsLbl.isHidden = true;
-        self.voteLbl.isHidden = true;
-        self.moreLbl.isHidden = true;
+        if (voteLbl.isHidden == false) {
+            UIView.transition(with: voteLbl, duration: 0.2,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                self.voteIcon.layer.opacity = 0.5;
+                self.voteLbl.layer.opacity = 0.5;
+                self.voteLbl.isHidden = true;
+            });
+        }
+        if (moreLbl.isHidden == false) {
+            UIView.transition(with: moreLbl, duration: 0.2,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                self.moreIcon.layer.opacity = 0.5;
+                self.moreLbl.layer.opacity = 0.5;
+                self.moreLbl.isHidden = true;
+            });
+        }
+        if (rankingsLbl.isHidden == false) {
+            UIView.transition(with: rankingsLbl, duration: 0.2,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                self.rankingsLbl.isHidden = true;
+                self.rankingsIcon.layer.opacity = 0.5;
+                self.rankingsLbl.layer.opacity = 0.5;
+            });
+        }
     }
     
     func showVoteTab() {
@@ -80,6 +98,8 @@ class HomeViewController: UIViewController {
                           options: .transitionCrossDissolve,
                           animations: {
             self.voteLbl.isHidden = false;
+            self.voteIcon.layer.opacity = 1;
+            self.voteLbl.layer.opacity = 1;
         });
     }
     
@@ -89,6 +109,8 @@ class HomeViewController: UIViewController {
                           options: .transitionCrossDissolve,
                           animations: {
             self.rankingsLbl.isHidden = false;
+            self.rankingsIcon.layer.opacity = 1;
+            self.rankingsLbl.layer.opacity = 1;
         });
     }
     
@@ -98,6 +120,8 @@ class HomeViewController: UIViewController {
                           options: .transitionCrossDissolve,
                           animations: {
             self.moreLbl.isHidden = false;
+            self.moreIcon.layer.opacity = 1;
+            self.moreLbl.layer.opacity = 1;
         });
     }
     
