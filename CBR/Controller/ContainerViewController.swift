@@ -39,6 +39,7 @@ class ContainerViewController: UIViewController {
     private func showRankingsPage() {
         hideAllPages();
         rankingsVC?.view.isHidden = false;
+        rankingsVC?.loadRankings();
     }
     
     private func setup() {
