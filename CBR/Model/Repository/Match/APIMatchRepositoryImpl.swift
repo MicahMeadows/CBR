@@ -8,10 +8,8 @@
 import Foundation
 
 class APIMatchRepositoryImpl : MatchRepository {
-    let baseUrl = "https://8d9e-199-168-73-143.ngrok.io";
-    
     func submitMatch(result: MatchResult) async {
-        guard let url = URL(string: "\(baseUrl)/api/Match") else { fatalError("Missing URL"); };
+        guard let url = URL(string: "\(CBR_API.base_address)/api/Match") else { fatalError("Missing URL"); };
         
         let jsonData = try! JSONEncoder().encode(result);
         
@@ -24,7 +22,7 @@ class APIMatchRepositoryImpl : MatchRepository {
     }
     
     func getNewMatch() async -> Match {
-        guard let url = URL(string: "\(baseUrl)/api/Match") else { fatalError("Missing URL"); }
+        guard let url = URL(string: "\(CBR_API.base_address)/api/Match") else { fatalError("Missing URL"); }
         let urlRequest = URLRequest(url: url);
         let (data, response) = try! await URLSession.shared.data(for: urlRequest);
         

@@ -19,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="362" height="303"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="79u-Li-dc4">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="79a0f7b2-2686-43d4-ac34-89565da0fa77.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="79u-Li-dc4">
                     <rect key="frame" x="0.0" y="0.0" width="362" height="303"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-hy-PJc">
@@ -52,11 +51,17 @@
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="79u-Li-dc4" firstAttribute="centerY" secondItem="ctv-f7-8T1" secondAttribute="centerY" id="4cP-M1-HJM"/>
+                <constraint firstItem="79u-Li-dc4" firstAttribute="centerX" secondItem="ctv-f7-8T1" secondAttribute="centerX" id="FJz-Sk-j5u"/>
                 <constraint firstItem="OQq-hy-PJc" firstAttribute="centerX" secondItem="ctv-f7-8T1" secondAttribute="centerX" id="GhM-7l-dnC"/>
+                <constraint firstItem="79u-Li-dc4" firstAttribute="top" secondItem="ctv-f7-8T1" secondAttribute="top" id="clb-3g-vTg"/>
                 <constraint firstAttribute="bottom" secondItem="KMZ-CA-le1" secondAttribute="bottom" id="f3z-mG-boj"/>
                 <constraint firstItem="OQq-hy-PJc" firstAttribute="top" secondItem="ctv-f7-8T1" secondAttribute="top" constant="20" id="jRz-hg-zXB"/>
+                <constraint firstAttribute="trailing" secondItem="79u-Li-dc4" secondAttribute="trailing" id="k3h-vc-2PI"/>
                 <constraint firstItem="KMZ-CA-le1" firstAttribute="leading" secondItem="ctv-f7-8T1" secondAttribute="leading" id="pXc-Vz-ZgY"/>
                 <constraint firstItem="KMZ-CA-le1" firstAttribute="trailing" secondItem="ctv-f7-8T1" secondAttribute="trailing" id="phd-5h-e8C"/>
+                <constraint firstAttribute="bottom" secondItem="79u-Li-dc4" secondAttribute="bottom" id="vbr-ry-7L4"/>
+                <constraint firstItem="79u-Li-dc4" firstAttribute="leading" secondItem="ctv-f7-8T1" secondAttribute="leading" id="yYD-ek-0N9"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -64,6 +69,6 @@
         </view>
     </objects>
     <resources>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="79a0f7b2-2686-43d4-ac34-89565da0fa77.jpg" width="2048" height="1149"/>
     </resources>
 </document>
