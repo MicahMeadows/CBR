@@ -37,6 +37,7 @@
 		FFFF08CE28F7B73800BA9241 /* RankingsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF08CD28F7B73800BA9241 /* RankingsViewDelegate.swift */; };
 		FFFF08D028F7B90F00BA9241 /* TestRankingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF08CF28F7B90F00BA9241 /* TestRankingsRepositoryImpl.swift */; };
 		FFFF08D228F7BF0800BA9241 /* APIRankingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF08D128F7BF0800BA9241 /* APIRankingRepositoryImpl.swift */; };
+		FFFF08D528F7D30C00BA9241 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF08D428F7D30C00BA9241 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		FFFF08CD28F7B73800BA9241 /* RankingsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewDelegate.swift; sourceTree = "<group>"; };
 		FFFF08CF28F7B90F00BA9241 /* TestRankingsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRankingsRepositoryImpl.swift; sourceTree = "<group>"; };
 		FFFF08D128F7BF0800BA9241 /* APIRankingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRankingRepositoryImpl.swift; sourceTree = "<group>"; };
+		FFFF08D428F7D30C00BA9241 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				FFF0736028ECA0B800A0C3E3 /* VoteViewController.swift */,
 				FFF0736228ECA0C100A0C3E3 /* RankingsViewController.swift */,
 				FFF0736628ECB18D00A0C3E3 /* ContainerViewController.swift */,
+				FFFF08D428F7D30C00BA9241 /* MoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFF08D228F7BF0800BA9241 /* APIRankingRepositoryImpl.swift in Sources */,
+				FFFF08D528F7D30C00BA9241 /* MoreViewController.swift in Sources */,
 				FFDCF90628E34C3600BDDDF3 /* ViewController.swift in Sources */,
 				FFFF08CA28F7B61100BA9241 /* RankingRepository.swift in Sources */,
 				FF84D40D28ECFCC800DED2F9 /* BottomCardVoteView.swift in Sources */,

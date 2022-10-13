@@ -26,9 +26,25 @@ class ContainerViewController: UIViewController {
         return vc;
     }();
     
+    lazy var moreVC: MoreViewController? = {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main);
+        var vc: MoreViewController?;
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "MoreViewController") as?
+            MoreViewController {
+            vc = viewController;
+        }
+        return vc;
+    }();
+    
     private func hideAllPages() {
         rankingsVC?.view.isHidden = true;
         voteVC?.view.isHidden = true;
+        moreVC?.view.isHidden = true;
+    }
+    
+    private func showMorePage() {
+        hideAllPages();
+        moreVC?.view.isHidden = false;
     }
     
     private func showVotePage() {
@@ -38,24 +54,14 @@ class ContainerViewController: UIViewController {
     
     private func showRankingsPage() {
         hideAllPages();
-        rankingsVC?.view.isHidden = false;
-        rankingsVC?.loadRankings();
+        if (rankingsVC?.view.isHidden ?? false) {
+            rankingsVC?.view.isHidden = false;
+            rankingsVC?.loadRankings();
+        }
     }
     
-    private func setup() {
-        addChild(rankingsVC!);
-        addChild(voteVC!);
-        
-        self.view.addSubview(rankingsVC!.view);
-        self.view.addSubview(voteVC!.view);
-        
-        rankingsVC?.didMove(toParent: self);
-        voteVC?.didMove(toParent: self);
-        
-        rankingsVC?.view.frame = self.view.bounds;
-        voteVC?.view.frame = self.view.bounds;
-        
-        hideAllPages();
+    @objc func goMorePage(_ notif: Notification) {
+        showMorePage();
     }
     
     @objc func goRankingPage(_ notif: Notification) {
@@ -71,13 +77,30 @@ class ContainerViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(goVotePage(_:)), name: NSNotification.Name("navigate.vote"), object: nil);
         
-        setup();
+        NotificationCenter.default.addObserver(self, selector: #selector(goMorePage(_:)), name: NSNotification.Name("navigate.more"), object: nil);
         
-        showVotePage();
+        addChild(rankingsVC!);
+        addChild(voteVC!);
+        addChild(moreVC!);
+        
+        
+        self.view.addSubview(rankingsVC!.view);
+        self.view.addSubview(voteVC!.view);
+        self.view.addSubview(moreVC!.view);
+        
+        rankingsVC?.didMove(toParent: self);
+        voteVC?.didMove(toParent: self);
+        moreVC?.didMove(toParent: self);
+        
+        rankingsVC?.view.frame = self.view.bounds;
+        voteVC?.view.frame = self.view.bounds;
+        moreVC?.view.frame = self.view.bounds;
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
