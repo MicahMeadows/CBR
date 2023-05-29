@@ -23,7 +23,8 @@ class APIMatchRepositoryImpl : MatchRepository {
     
     func getNewMatch() async -> Match {
         guard let url = URL(string: "\(CBR_API.base_address)/api/Match") else { fatalError("Missing URL"); }
-        let urlRequest = URLRequest(url: url);
+        var urlRequest = URLRequest(url: url);
+        urlRequest.httpMethod = "GET";
         let (data, response) = try! await URLSession.shared.data(for: urlRequest);
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {

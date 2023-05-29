@@ -43,7 +43,7 @@ class LocationDetailViewController: UIViewController, LocationDetailsViewDelegat
             
             let winCnt = locationDetails.winCount;
             let lossCnt = locationDetails.matchCount - locationDetails.winCount;
-            self.winLossLbl.text = "\(winCnt)/\(lossCnt)";
+            self.winLossLbl.text = "\(winCnt)-\(lossCnt)";
             
             let winPercent = Double(Double(winCnt) / Double(locationDetails.matchCount)) * 100.0;
             self.winRateLbl.text = "\(Int(winPercent))%";
